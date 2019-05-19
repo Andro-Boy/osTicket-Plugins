@@ -13,7 +13,8 @@ class MicrosoftProviderAuth {
     global $ost;
     $self = $this;
 
-    $redirectUri = rawurlencode(rtrim($ost->getConfig()->getURL(), '/') . '/api/auth/ext');
+    $customeRedirectUri = $this->config->get('CUSTOME_REDIRECT');
+    $redirectUri = rawurlencode(rtrim($ost->getConfig()->getURL(), '/') . $customeRedirectUri);
     $clientId = $this->config->get('CLIENT_ID');
     $clientSecret = $this->config->get('CLIENT_SECRET');
     $scopes = rawurlencode($this->config->get('SCOPES'));
