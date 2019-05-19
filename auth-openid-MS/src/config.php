@@ -46,6 +46,12 @@ class OpenIDAuthMSPluginConfig extends PluginConfig {
       'CUSTOME_REDIRECT' => new TextboxField(array(
         'label' => $__('Redirect URL'),
         'required'=>true,
+        'hint' => $__('Redirect URL, must be as in your configured Microsoft app'),
+        'configuration' => array('size'=>60, 'length'=>100),
+      )),
+      'CUSTOME_REDIRECT' => new TextboxField(array(
+        'label' => $__('Redirect URL'),
+        'required'=>true,
         'hint' => $__('Redirecet link, must be the same as you set it in Microsoft app config. E.g., /osticket'),
         'configuration' => array('size'=>60, 'length'=>100),
       )),
