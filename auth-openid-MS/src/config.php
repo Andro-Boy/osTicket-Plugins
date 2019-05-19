@@ -43,6 +43,12 @@ class OpenIDAuthMSPluginConfig extends PluginConfig {
         'hint' => $__('Base URL for authorization. E.g., https://login.microsoftonline.com/common'),
         'configuration' => array('size'=>60, 'length'=>100),
       )),
+      'CUSTOME_REDIRECT' => new TextboxField(array(
+        'label' => $__('Redirect URL'),
+        'required'=>true,
+        'hint' => $__('Redirecet link, must be the same as you set it in Microsoft app config. E.g., /osticket'),
+        'configuration' => array('size'=>60, 'length'=>100),
+      )),
       'AUTHORIZE_ENDPOINT' => new TextboxField(array(
         'label' => $__('Authorization Endpoint'),
         'required'=>true,
